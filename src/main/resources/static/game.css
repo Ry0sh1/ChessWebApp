@@ -1,0 +1,16 @@
+.black{
+    background-color: black;
+    color: white;
+}
+.white{
+    background-color: white;
+    color: black;
+}
+.field{
+    border: black solid 1px;
+}
+#board{
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+}

@@ -11,4 +11,9 @@ public class GameController {
         return "index";
     }
 
+    @GetMapping("/game")
+    public String getGame(){
+        return "Game";
+    }
+
 }
