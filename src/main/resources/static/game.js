@@ -1,8 +1,8 @@
 let code = "ABCD";
 const board = document.getElementById('board');
+let letters = ['a','b','c','d','e','f','g','h'];
 
 function addAllFields(){
-    let letters = ['a','b','c','d','e','f','g','h'];
     let black = false;
     for (let i = 8; i>0;i--){
         for (let j = 0;j<8;j++){
@@ -15,11 +15,40 @@ function addAllFields(){
             field.classList.add('field');
             black = !black;
             field.id = `${i},${letters[j]}`;
-            field.innerText = field.id;
             board.append(field);
         }
         black = !black;
     }
+    setAllFigures();
+}
+
+function setAllFigures(){
+    //Pawns
+    for (let i = 0;i < 8;i++){
+        document.getElementById(`${2},${letters[i]}`).innerHTML = `<img class="figure" src="/figures/white-pawn.png">`;
+        document.getElementById(`${7},${letters[i]}`).innerText = `<img class="figure" src="/figures/black-pawn.png">`;
+    }
+    let a = [1,8];
+    let black = false;
+    for (let i = 0;i<2;i++){
+        let colorText;
+        if (black){
+            colorText = "black";
+        }else {
+            colorText = "white";
+        }
+        document.getElementById(`${a[i]},a`).innerHTML = `<img class="figure" src="/figures/${colorText}-bishop.png">`;
+        document.getElementById(`${a[i]},h`).innerText = `<img class="figure" src="/figures/${colorText}-rook.png">`;
+        document.getElementById(`${a[i]},b`).innerText = `<img class="figure" src="/figures/${colorText}-knight.png">`;
+        document.getElementById(`${a[i]},g`).innerText = `<img class="figure" src="/figures/${colorText}-knight.png">`;
+        document.getElementById(`${a[i]},c`).innerText = `<img class="figure" src="/figures/${colorText}-bishop.png">`;
+        document.getElementById(`${a[i]},f`).innerText = `<img class="figure" src="/figures/${colorText}-bishop.png">`;
+        document.getElementById(`${a[i]},d`).innerText = `<img class="figure" src="/figures/${colorText}-queen.png">`;
+        document.getElementById(`${a[i]},e`).innerText = `<img class="figure" src="/figures/${colorText}-king.png">`;
+        black = !black;
+    }
+
+
 }
 
 function connect(){
