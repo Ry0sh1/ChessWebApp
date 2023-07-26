@@ -26,7 +26,7 @@ function setAllFigures(){
     //Pawns
     for (let i = 0;i < 8;i++){
         document.getElementById(`${2},${letters[i]}`).innerHTML = `<img class="figure" src="/figures/white-pawn.png">`;
-        document.getElementById(`${7},${letters[i]}`).innerText = `<img class="figure" src="/figures/black-pawn.png">`;
+        document.getElementById(`${7},${letters[i]}`).innerHTML = `<img class="figure" src="/figures/black-pawn.png">`;
     }
     let a = [1,8];
     let black = false;
@@ -37,14 +37,14 @@ function setAllFigures(){
         }else {
             colorText = "white";
         }
-        document.getElementById(`${a[i]},a`).innerHTML = `<img class="figure" src="/figures/${colorText}-bishop.png">`;
-        document.getElementById(`${a[i]},h`).innerText = `<img class="figure" src="/figures/${colorText}-rook.png">`;
-        document.getElementById(`${a[i]},b`).innerText = `<img class="figure" src="/figures/${colorText}-knight.png">`;
-        document.getElementById(`${a[i]},g`).innerText = `<img class="figure" src="/figures/${colorText}-knight.png">`;
-        document.getElementById(`${a[i]},c`).innerText = `<img class="figure" src="/figures/${colorText}-bishop.png">`;
-        document.getElementById(`${a[i]},f`).innerText = `<img class="figure" src="/figures/${colorText}-bishop.png">`;
-        document.getElementById(`${a[i]},d`).innerText = `<img class="figure" src="/figures/${colorText}-queen.png">`;
-        document.getElementById(`${a[i]},e`).innerText = `<img class="figure" src="/figures/${colorText}-king.png">`;
+        document.getElementById(`${a[i]},a`).innerHTML = `<img class="figure" src="/figures/${colorText}-rook.png">`;
+        document.getElementById(`${a[i]},h`).innerHTML = `<img class="figure" src="/figures/${colorText}-rook.png">`;
+        document.getElementById(`${a[i]},b`).innerHTML = `<img class="figure" src="/figures/${colorText}-knight.png">`;
+        document.getElementById(`${a[i]},g`).innerHTML = `<img class="figure" src="/figures/${colorText}-knight.png">`;
+        document.getElementById(`${a[i]},c`).innerHTML = `<img class="figure" src="/figures/${colorText}-bishop.png">`;
+        document.getElementById(`${a[i]},f`).innerHTML = `<img class="figure" src="/figures/${colorText}-bishop.png">`;
+        document.getElementById(`${a[i]},d`).innerHTML = `<img class="figure" src="/figures/${colorText}-queen.png">`;
+        document.getElementById(`${a[i]},e`).innerHTML = `<img class="figure" src="/figures/${colorText}-king.png">`;
         black = !black;
     }
 
